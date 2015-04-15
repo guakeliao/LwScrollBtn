@@ -6,25 +6,24 @@
 //  Copyright (c) 2014年 Boco. All rights reserved.
 //
 
-
 #import <UIKit/UIKit.h>
 #import "Macros.h"
 
-typedef void(^btnClick)(NSInteger i);
+typedef void (^btnClick)(NSInteger i);
 @interface ScrollViewMenu : UIView
 /**
  *  item里面的信息
  */
-@property(nonatomic,strong) NSMutableArray *itemInfoArray;
+@property(nonatomic, strong) NSMutableArray *itemInfoArray DEPRECATED_ATTRIBUTE;
 /**
  *  item的宽度以及高度
  */
-@property (nonatomic,assign) CGFloat itemWeithAndHeight;
-@property (nonatomic,copy) btnClick btnClick;
--(void)reloadArray:(NSMutableArray *)array;
+@property(nonatomic, assign) CGFloat itemWeithAndHeight;
+@property(nonatomic, copy) btnClick btnClick;
+- (void)reloadArray:(NSMutableArray *)array;
 
 #pragma mark 选中某个button
--(void)clickButtonAtIndex:(NSInteger)aIndex;
+- (void)clickButtonAtIndex:(NSInteger)aIndex;
 
--(void)changeButtonStateAtIndex:(NSInteger)aIndex;
+- (void)changeButtonStateAtIndex:(NSInteger)aIndex;
 @end
